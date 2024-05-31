@@ -5,7 +5,6 @@ namespace Wasinpwg\LaravelCarbonMacroBuddhist;
 use Illuminate\Support\Carbon;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Wasinpwg\LaravelCarbonMacroBuddhist\Commands\LaravelCarbonMacroBuddhistCommand;
 
 class LaravelCarbonMacroBuddhistServiceProvider extends PackageServiceProvider
 {
@@ -19,6 +18,7 @@ class LaravelCarbonMacroBuddhistServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-carbon-macro-buddhist');
     }
+
     public function boot()
     {
         Carbon::macro('buddhistFormatHelper', function ($format, $callback) {
@@ -30,9 +30,10 @@ class LaravelCarbonMacroBuddhistServiceProvider extends PackageServiceProvider
                 'Y' => '!!!!0000!!!!',
             ]);
             $string = $callback($format);
+
             return strtr($string, [
                 '!!!!00!!!!' => substr((string) $buddhistYear, -2),
-                '!!!!0000!!!!' => $buddhistYear
+                '!!!!0000!!!!' => $buddhistYear,
             ]);
         });
 
@@ -52,8 +53,8 @@ class LaravelCarbonMacroBuddhistServiceProvider extends PackageServiceProvider
             $format = strtr($format, [
                 '\y' => '\y',
                 '\Y' => '\Y',
-                'y' => '!!!!' . substr((string) (+$year - 543), -2) . '!!!!',
-                'Y' => '!!!!' . substr((string) (+$year - 543), -4) . '!!!!',
+                'y' => '!!!!'.substr((string) (+$year - 543), -2).'!!!!',
+                'Y' => '!!!!'.substr((string) (+$year - 543), -4).'!!!!',
             ]);
 
             return $this->createFromFormat($format, $time, $timezone);
