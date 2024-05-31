@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "wasinpwg/laravel-carbon-macro-buddhist",
+    "description": "This is my package laravel-carbon-macro-buddhist",
     "keywords": [
-        ":vendor_name",
+        "Wasin Phungwigrai",
         "laravel",
-        ":package_slug"
+        "laravel-carbon-macro-buddhist"
     ],
-    "homepage": "https://github.com/:author_username/:package_slug",
+    "homepage": "https://github.com/Plong-Wasin/laravel-carbon-macro-buddhist",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Wasin Phungwigrai",
+            "email": "wasin.pwg@gmail.com",
             "role": "Developer"
         }
     ],
@@ -35,19 +35,19 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Wasinpwg\\LaravelCarbonMacroBuddhist\\": "src/",
+            "Wasinpwg\\LaravelCarbonMacroBuddhist\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
+            "Wasinpwg\\LaravelCarbonMacroBuddhist\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "clear": "@php vendor/bin/testbench package:purge-laravel-carbon-macro-buddhist --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "build": [
             "@composer run prepare",
@@ -73,10 +73,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Wasinpwg\\LaravelCarbonMacroBuddhist\\LaravelCarbonMacroBuddhistServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LaravelCarbonMacroBuddhist": "Wasinpwg\\LaravelCarbonMacroBuddhist\\Facades\\LaravelCarbonMacroBuddhist"
             }
         }
     },
