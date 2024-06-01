@@ -2,6 +2,7 @@
 
 namespace Wasinpwg\CarbonBuddhistMacros\Macros;
 
+use Illuminate\Support\Carbon;
 
 /**
  * Format the current Carbon instance using the Buddhist calendar year.
@@ -19,17 +20,35 @@ class CreateFromBuddhistYearFormat
     public function __invoke()
     {
         return function ($format, $time, $timezone = null) {
-            $adYear = $this->createFromFormat('Y', $time, $timezone)->year;
-            $buddhistYear = $adYear + 543;
-            $formatReplacements = [
-                '\y' => '\y',
-                '\Y' => '\Y',
-                'y' => substr((string) $buddhistYear, -2),
-                'Y' => (string) $buddhistYear,
-            ];
+            $hasYearFormat = str_contains($format, 'y') || str_contains($format, 'Y');
+            if (!$hasYearFormat) {
+                return Carbon::createFromFormat($format, $time, $timezone);
+            }
+            try {
+                $date = Carbon::createFromFormat($format, $time, $timezone);
+                $year = $date->year;
+                if (!str_contains($format, 'y')) {
+                    $newTime = strtr($time, [
+                        (string)$year => (string)($year - 543),
+                    ]);
 
-            $formattedString = $this->createFromFormat($format, $time, $timezone);
-            return $formattedString->format(strtr($format, $formatReplacements));
+                    return Carbon::createFromFormat($format, $newTime, $timezone);
+                }
+            } catch (\Exception $e) {
+            }
+            $date = Carbon::createFromFormat($format, $time, $timezone);
+            if ($date->format($format) == $time) {
+                return $date->subYears(543);
+            }
+
+            $date = $date->subYears(543);
+            if (!$date->isLeapYear()) {
+                return $date;
+            }
+            if ($date->format('m-d') == '03-01') {
+                return $date->subDay();
+            }
+            return $date;
         };
     }
 }

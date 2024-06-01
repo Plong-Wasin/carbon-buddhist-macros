@@ -73,10 +73,7 @@
         "laravel": {
             "providers": [
                 "Wasinpwg\\CarbonBuddhistMacros\\CarbonBuddhistMacroServiceProvider"
-            ],
-            "aliases": {
-                "CarbonBuddhistMacros": "Wasinpwg\\CarbonBuddhistMacros\\Facades\\CarbonBuddhistMacros"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
