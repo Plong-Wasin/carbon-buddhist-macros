@@ -1,12 +1,12 @@
 <?php
 
-namespace Wasinpwg\LaravelCarbonMacroBuddhist;
+namespace Wasinpwg\CarbonBuddhistMacros;
 
 use Illuminate\Support\Carbon;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class LaravelCarbonMacroBuddhistServiceProvider extends PackageServiceProvider
+class CarbonBuddhistMacroServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,7 +16,7 @@ class LaravelCarbonMacroBuddhistServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('laravel-carbon-macro-buddhist');
+            ->name('laravel-carbon-buddhist-macros');
     }
 
     public function boot()
@@ -53,8 +53,8 @@ class LaravelCarbonMacroBuddhistServiceProvider extends PackageServiceProvider
             $format = strtr($format, [
                 '\y' => '\y',
                 '\Y' => '\Y',
-                'y' => '!!!!'.substr((string) (+$year - 543), -2).'!!!!',
-                'Y' => '!!!!'.substr((string) (+$year - 543), -4).'!!!!',
+                'y' => '!!!!' . substr((string) (+$year - 543), -2) . '!!!!',
+                'Y' => '!!!!' . substr((string) (+$year - 543), -4) . '!!!!',
             ]);
 
             return $this->createFromFormat($format, $time, $timezone);

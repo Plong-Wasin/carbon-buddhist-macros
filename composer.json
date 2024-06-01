@@ -1,12 +1,12 @@
 {
-    "name": "wasinpwg/laravel-carbon-macro-buddhist",
-    "description": "This is my package laravel-carbon-macro-buddhist",
+    "name": "wasinpwg/laravel-carbon-buddhist-macros",
+    "description": "This is my package laravel-carbon-buddhist-macros",
     "keywords": [
         "Wasin Phungwigrai",
         "laravel",
-        "laravel-carbon-macro-buddhist"
+        "laravel-carbon-buddhist-macros"
     ],
-    "homepage": "https://github.com/Plong-Wasin/laravel-carbon-macro-buddhist",
+    "homepage": "https://github.com/Plong-Wasin/laravel-carbon-buddhist-macros",
     "license": "MIT",
     "authors": [
         {
@@ -35,19 +35,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Wasinpwg\\LaravelCarbonMacroBuddhist\\": "src/",
-            "Wasinpwg\\LaravelCarbonMacroBuddhist\\Database\\Factories\\": "database/factories/"
+            "Wasinpwg\\CarbonBuddhistMacros\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Wasinpwg\\LaravelCarbonMacroBuddhist\\Tests\\": "tests/",
+            "Wasinpwg\\CarbonBuddhistMacros\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-laravel-carbon-macro-buddhist --ansi",
+        "clear": "@php vendor/bin/testbench package:purge-laravel-carbon-buddhist-macros --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "build": [
             "@composer run prepare",
@@ -73,10 +72,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Wasinpwg\\LaravelCarbonMacroBuddhist\\LaravelCarbonMacroBuddhistServiceProvider"
+                "Wasinpwg\\CarbonBuddhistMacros\\CarbonBuddhistMacroServiceProvider"
             ],
             "aliases": {
-                "LaravelCarbonMacroBuddhist": "Wasinpwg\\LaravelCarbonMacroBuddhist\\Facades\\LaravelCarbonMacroBuddhist"
+                "CarbonBuddhistMacros": "Wasinpwg\\CarbonBuddhistMacros\\Facades\\CarbonBuddhistMacros"
             }
         }
     },

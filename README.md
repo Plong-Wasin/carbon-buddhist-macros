@@ -1,15 +1,15 @@
-# This is my package laravel-carbon-macro-buddhist
+# This is my package laravel-carbon-buddhist-macros
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/plong-wasin/laravel-carbon-macro-buddhist.svg?style=flat-square)](https://packagist.org/packages/plong-wasin/laravel-carbon-macro-buddhist)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/Plong-Wasin/laravel-carbon-macro-buddhist/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/Plong-Wasin/laravel-carbon-macro-buddhist/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/Plong-Wasin/laravel-carbon-macro-buddhist/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/Plong-Wasin/laravel-carbon-macro-buddhist/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/plong-wasin/laravel-carbon-macro-buddhist.svg?style=flat-square)](https://packagist.org/packages/plong-wasin/laravel-carbon-macro-buddhist)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/plong-wasin/laravel-carbon-buddhist-macros.svg?style=flat-square)](https://packagist.org/packages/plong-wasin/laravel-carbon-buddhist-macros)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/Plong-Wasin/laravel-carbon-buddhist-macros/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/Plong-Wasin/laravel-carbon-buddhist-macros/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/Plong-Wasin/laravel-carbon-buddhist-macros/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/Plong-Wasin/laravel-carbon-buddhist-macros/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/plong-wasin/laravel-carbon-buddhist-macros.svg?style=flat-square)](https://packagist.org/packages/plong-wasin/laravel-carbon-buddhist-macros)
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
 ## Support us
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/laravel-carbon-macro-buddhist.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/laravel-carbon-macro-buddhist)
+[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/laravel-carbon-buddhist-macros.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/laravel-carbon-buddhist-macros)
 
 We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
 
@@ -20,20 +20,20 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 You can install the package via composer:
 
 ```bash
-composer require plong-wasin/laravel-carbon-macro-buddhist
+composer require plong-wasin/laravel-carbon-buddhist-macros
 ```
 
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-carbon-macro-buddhist-migrations"
+php artisan vendor:publish --tag="laravel-carbon-buddhist-macros-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-carbon-macro-buddhist-config"
+php artisan vendor:publish --tag="laravel-carbon-buddhist-macros-config"
 ```
 
 This is the contents of the published config file:
@@ -46,14 +46,14 @@ return [
 Optionally, you can publish the views using
 
 ```bash
-php artisan vendor:publish --tag="laravel-carbon-macro-buddhist-views"
+php artisan vendor:publish --tag="laravel-carbon-buddhist-macros-views"
 ```
 
 ## Usage
 
 ```php
-$laravelCarbonMacroBuddhist = new Wasinpwg\LaravelCarbonMacroBuddhist();
-echo $laravelCarbonMacroBuddhist->echoPhrase('Hello, Wasinpwg!');
+$CarbonBuddhistMacro = new Wasinpwg\CarbonBuddhistMacros();
+echo $CarbonBuddhistMacro->echoPhrase('Hello, Wasinpwg!');
 ```
 
 ## Testing

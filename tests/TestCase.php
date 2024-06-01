@@ -1,10 +1,10 @@
 <?php
 
-namespace Wasinpwg\LaravelCarbonMacroBuddhist\Tests;
+namespace Wasinpwg\CarbonBuddhistMacros\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Wasinpwg\LaravelCarbonMacroBuddhist\LaravelCarbonMacroBuddhistServiceProvider;
+use Wasinpwg\CarbonBuddhistMacros\CarbonBuddhistMacroServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,14 +13,14 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Wasinpwg\\LaravelCarbonMacroBuddhist\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Wasinpwg\\CarbonBuddhistMacros\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
         );
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            LaravelCarbonMacroBuddhistServiceProvider::class,
+            CarbonBuddhistMacroServiceProvider::class,
         ];
     }
 
@@ -29,7 +29,7 @@ class TestCase extends Orchestra
         config()->set('database.default', 'testing');
 
         /*
-        $migration = include __DIR__.'/../database/migrations/create_laravel-carbon-macro-buddhist_table.php.stub';
+        $migration = include __DIR__.'/../database/migrations/create_laravel-carbon-buddhist-macros_table.php.stub';
         $migration->up();
         */
     }
