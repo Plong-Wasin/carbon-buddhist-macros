@@ -53,8 +53,8 @@ class CarbonBuddhistMacroServiceProvider extends PackageServiceProvider
             $format = strtr($format, [
                 '\y' => '\y',
                 '\Y' => '\Y',
-                'y' => '!!!!' . substr((string) (+$year - 543), -2) . '!!!!',
-                'Y' => '!!!!' . substr((string) (+$year - 543), -4) . '!!!!',
+                'y' => '!!!!'.substr((string) (+$year - 543), -2).'!!!!',
+                'Y' => '!!!!'.substr((string) (+$year - 543), -4).'!!!!',
             ]);
 
             return $this->createFromFormat($format, $time, $timezone);
