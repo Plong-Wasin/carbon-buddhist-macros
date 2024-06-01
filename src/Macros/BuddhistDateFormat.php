@@ -25,7 +25,7 @@ class BuddhistDateFormat
 
             // Define the replacements for the placeholders with Buddhist year
             $buddhistYearReplacements = [
-                '!!!!00!!!!' => substr((string)$buddhistYear, -2), // last 2 digits of the Buddhist year
+                '!!!!00!!!!' => substr((string) $buddhistYear, -2), // last 2 digits of the Buddhist year
                 '!!!!0000!!!!' => $buddhistYear, // full Buddhist year
             ];
 
