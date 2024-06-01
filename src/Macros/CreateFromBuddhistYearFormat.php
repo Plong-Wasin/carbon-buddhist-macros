@@ -21,15 +21,15 @@ class CreateFromBuddhistYearFormat
     {
         return function ($format, $time, $timezone = null) {
             $hasYearFormat = str_contains($format, 'y') || str_contains($format, 'Y');
-            if (!$hasYearFormat) {
+            if (! $hasYearFormat) {
                 return Carbon::createFromFormat($format, $time, $timezone);
             }
             try {
                 $date = Carbon::createFromFormat($format, $time, $timezone);
                 $year = $date->year;
-                if (!str_contains($format, 'y')) {
+                if (! str_contains($format, 'y')) {
                     $newTime = strtr($time, [
-                        (string)$year => (string)($year - 543),
+                        (string) $year => (string) ($year - 543),
                     ]);
 
                     return Carbon::createFromFormat($format, $newTime, $timezone);
@@ -42,12 +42,13 @@ class CreateFromBuddhistYearFormat
             }
 
             $date = $date->subYears(543);
-            if (!$date->isLeapYear()) {
+            if (! $date->isLeapYear()) {
                 return $date;
             }
             if ($date->format('m-d') == '03-01') {
                 return $date->subDay();
             }
+
             return $date;
         };
     }
