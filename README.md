@@ -12,7 +12,7 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 You can install the package via composer:
 
 ```bash
-composer require plong-wasin/laravel-carbon-buddhist-macros
+composer require wasinpwg/laravel-carbon-buddhist-macros
 ```
 
 ## Usage
