@@ -1,12 +1,12 @@
 {
-    "name": "wasinpwg/laravel-carbon-buddhist-macros",
-    "description": "This is my package laravel-carbon-buddhist-macros",
+    "name": "wasinpwg/carbon-buddhist-macros",
+    "description": "This is my package carbon-buddhist-macros",
     "keywords": [
         "Wasin Phungwigrai",
         "laravel",
-        "laravel-carbon-buddhist-macros"
+        "carbon-buddhist-macros"
     ],
-    "homepage": "https://github.com/Plong-Wasin/laravel-carbon-buddhist-macros",
+    "homepage": "https://github.com/Plong-Wasin/carbon-buddhist-macros",
     "license": "MIT",
     "authors": [
         {
@@ -46,7 +46,7 @@
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-laravel-carbon-buddhist-macros --ansi",
+        "clear": "@php vendor/bin/testbench package:purge-carbon-buddhist-macros --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "build": [
             "@composer run prepare",

@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `laravel-carbon-buddhist-macros` will be documented in this file.
+All notable changes to `carbon-buddhist-macros` will be documented in this file.
 
 ## v0.1.0 - 2024-06-05
 
