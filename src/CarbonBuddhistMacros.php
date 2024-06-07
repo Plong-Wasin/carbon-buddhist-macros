@@ -11,7 +11,7 @@ class CarbonBuddhistMacros
         $macros = $this->macros();
 
         foreach ($macros as $macro => $class) {
-            if (!Carbon::hasMacro($macro)) {
+            if (! Carbon::hasMacro($macro)) {
                 Carbon::macro($macro, (new $class)());
             }
         }
